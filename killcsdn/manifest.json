@@ -1,0 +1,33 @@
+{
+
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "killcsdn",
+    "description": "干掉csdn",
+    "icons": {
+         "128": "imgs/icon-128.png",
+         "16": "imgs/icon-16.png"
+    },
+    "content_scripts":[
+        {
+            "matches": ["https://blog.csdn.net/*"],
+            "js":["js/main.js"]
+        }
+    ],
+    "homepage_url":"https://gitee.com/redsky/killcsdn",
+    "page_action": {
+        "default_icon": {
+            "19": "imgs/icon-19.png",
+            "38": "imgs/icon-38.png"
+        },
+        "default_title": "killcsdn"
+    },
+    "web_accessible_resources": ["js/kill.js"],
+    "permissions":[
+        "https://blog.csdn.net/*","declarativeContent","background"
+    ],
+    "background":{
+        "scripts":["js/background.js"],
+        "persistent" : true
+    }
+}
