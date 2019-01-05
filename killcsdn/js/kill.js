@@ -1,9 +1,10 @@
-window.csdn.anonymousUserLimit.judgment = function(){return true}
-var targetBtn = document.getElementById("btn-readmore");
-if(targetBtn)
-{
-    targetBtn.click();
-}
+//window.csdn.anonymousUserLimit.judgment = function(){return true}
+
+    var targetBtn = document.getElementById("btn-readmore");
+    if(targetBtn)
+    {
+        targetBtn.click();
+    }
 function killAdblock(selector){
     var target = document.querySelector(selector);
     if(target)
@@ -20,4 +21,5 @@ function killAdblock(selector){
     }
     killAdblock(".check-adblock-bg");
     killAdblock(".adblock");
+    killAdblock(".pulllog-box");
 })()
